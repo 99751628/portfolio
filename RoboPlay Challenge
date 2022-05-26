@@ -1,0 +1,30 @@
+#include <linkbot.h>
+
+CLinkbotI meow;
+
+meow.driveDistance(9, 1.75);
+meow.turnRight(90, 1.75, 3.69);
+
+int x, y;
+printf("enter an x and a y coordinate");
+scanf("%i%i", &x,&y);
+
+if(x == 58 && y == 6){
+    meow.driveDistance(24, 1.75);
+    meow.turnRight(90, 1.75, 3.69);
+    meow.driveDistance(4, 1.75);
+}    
+
+if(x == 70 && y == 10){
+    meow.driveDistance(25, 1.75);
+    meow.driveDistance(8,1.75);
+}
+
+if (x == 66 && y == 22){
+    meow.driveDistance(23, 1.75);
+    meow.driveDistance(10, 1.75);
+    meow.turnLeft(90, 1.75, 3.69);
+    meow.driveDistance(9,1.75);
+}
+
+
