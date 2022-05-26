@@ -1,1 +1,76 @@
+// variables
+string_t nameone, nametwo;
+int years, feet;
+int fchoiceone, schoiceone;
+
+
+//introduction
+printf("Pick the names for your two adventurers(a man and a woman).");
+scanf("%s",&nameone);
+scanf("%s",&nametwo);
+
+//first choice
+printf(nameone + " and " + nametwo + " are on a hiking trip. ");
+printf("They want to explore a different part of the campsite and end up in an unfamiliar area.\n");
+printf("They are walking through the forest when they encounter a large mountain range.\n");
+printf("They decide on three options: to hike down the cliff, to stay put and do nothing, or to head east into the opposite \n side of the forests. What should they do? \n");
+printf(" Type '1' to hike down the side of the cliff, type '2' to stay put, and type '3' to head east into the forests.\n");
+scanf("%i", &fchoiceone);
+
+//path one
+if (fchoiceone == 1){
+    printf(nameone + " and " + nametwo + "  decide to hike down the cliff. They try to decide whether to use their rock-climbing equipment \n to climb down the cliff face, to jump for the water below, or to hike along the narrow trails down the mountain.\n");
+    printf(" Type '1' to use the rock-climbing equipment, type '2' to jump, and type '3' to use the mountain trails. What should they do?");
+    scanf("%i",&schoiceone);
+
+//path one outcome 
+    if (schoiceone == 1){
+        printf(nameone + " and " + nametwo + " put on their harnesses to begin climbing down the cliff. Unfortunately, \n they didn't bring the instruction manual and attach the harness incorrectly, which results in the harness breaking off midair \n and they plummet to their deaths. The end!");
+    }
+    if (schoiceone == 2){
+        feet = randint (300, 600);
+        printf(nameone + " and " + nametwo + "jump off of the cliff into the water below. Unfortunately, the impact \n of hitting the water from ", feet, " feet kills them both. The end!");
+    }
+    if (schoiceone == 3){
+        printf(nameone + " and " + nametwo + "decide to hike down the narrow mountain trails to reach the bottom. \n On the way there, a loose pebble trips" + nametwo + " and she grabs" + nameone + " to steady herself, but the action \n causes both of them to trip and they fall to their deaths. The end!");
+    }
+}
+
+//path two
+if (fchoiceone == 2){
+    printf(nameone + " and " + nametwo + " decide to stay put in their position and do nothing. They get hungry \n and thirsty and start looking around the area for a river or animals. They find a camp ranger, a river, and a deer. What should they do?");
+    printf(" Type '1' to talk to the camp ranger, type '2' to drink water from the river, and type '3' to hunt \n the deer for food.");
+    scanf("%i", &schoiceone);
+   
+//path two outcome
+    if (schoiceone == 1){
+        printf(nameone + " and " + nametwo + " decide to talk to the camp ranger. The camp ranger leads them to a \n helicopter pad that flies them safety home. You win!");
+    }
+    if (schoiceone == 2){
+        printf(nameone + " and " + nametwo + " decide to head to the river to drink water. A poisonous fish \n flops out of the water horrifyingly and bites " + nametwo + " and the venom drives her insane and she eats " + nameone + " in an act of cannibalism. Then, she has her lucid interval and dies from the fish poison. The end!");
+    }
+    if (schoiceone == 3){
+        printf(nameone + " and " + nametwo + " decide to hunt after the deer because they are so hungry. \n Unfomertunately, a ginormous bear who also wanted to eat the deer leaps out of the woods and mangles them. They both die. The end!");
+    }
+}
+
+//path three
+if (fchoiceone == 3){
+    printf(nameone + " and " + nametwo + " decide to head east into the woods in that direction. \n They reach a crossroads and have three options: to continue farther into the forest, to make camp for the night, \n or to go back the way that they came.");
+    printf("Type '1' to head farther into the forest, type '2' to make camp for the night, \n and type '3' to head back to the cliffs.");
+    scanf("%i", &schoiceone);
+
+//path three outcome
+    if (schoiceone == 1){
+        printf(nameone + " and " + nametwo + " decide to head farther east into the woods. They discover a beautiful meadow oasis with water, fruits and vegetable plants, and wildflowers. They decide to build a home in the meadow and live for two years until they die from rabies after a wild skunk bit " + nameone + " and he murdered " + nametwo + ". The end!");
+    }
+    if (schoiceone == 2){
+        years = randint(20, 50);
+        printf(nameone + " and " + nametwo + " decide to make a temporary camp in the middle of the woods.");
+        printf("They sing camp songs and roast marshmallows, liking the wildlife so much that they end up living wonderful hippie lives, wearing grass skirts and drinking dandelion juice. \n They live for ", years, " yearsand die peacefully in their sleep. The end!");
+    }
+    if (schoiceone == 3){
+        printf(nameone + " and " + nametwo + " decide to head back the way that they came. Unfortunately, it is very dark outside and they head in the wrong direction. They end up lost in the forest \n and die of thirst. The end!");
+    }
+}
 
