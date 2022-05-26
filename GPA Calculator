@@ -1,0 +1,46 @@
+//declare variables
+
+string_t grade;
+int gradeValue, i=0, total;
+double gpa, classes;
+
+//find out the number of classes
+
+printf("how many classes did you take?\n");
+scanf("%lf", &classes);
+
+//get the letter grades for each class
+
+while(i < classes) {
+    printf("what letter grade did you get?\n");
+    scanf("%s", &grade);
+
+    if (grade == "a" || grade == "A") {
+        gradeValue = 4;
+    }
+
+    if (grade == "b" || grade == "B") {
+        gradeValue = 3;
+    }
+
+    if (grade == "c" || grade == "C") {
+        gradeValue = 2;
+    }
+
+    if (grade == "d" || grade == "D") {
+        gradeValue = 1;
+    }
+
+    if (grade == "f" || grade == "F") {
+        gradeValue = 0;
+    }
+    i = i + 1;
+    total = total + gradeValue;
+}
+
+//divide the total gradeValue by the number of classes
+
+gpa = total/classes;
+
+//print out the gpa
+printf("Your gpa is %.2lf\n" , gpa);
